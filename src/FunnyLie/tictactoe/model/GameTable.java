@@ -12,7 +12,7 @@ public class GameTable {
         return table[cell.getRow()][cell.getCol()] == ' ';
     }
 
-    public char getSSign(final Cell cell) {
+    public char getSign(final Cell cell) {
         return table[cell.getRow()][cell.getCol()];
     }
 
