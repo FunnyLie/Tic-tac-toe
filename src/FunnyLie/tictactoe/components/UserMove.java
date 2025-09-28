@@ -8,15 +8,15 @@ import java.util.Scanner;
 public class UserMove {
 
     private final char[][] mapping = {
-            {'7', '8', '0'},
+            {'7', '8', '9'},
             {'4', '5', '6'},
             {'1', '2', '3'},
     };
 
 
     public void make(GameTable gameTable) {
-        final Cell cell = getUserInput();
         while (true) {
+        final Cell cell = getUserInput();
             if (gameTable.isEmpty((cell))) {
                 gameTable.setSign(cell, 'X');
                 return;
@@ -26,13 +26,13 @@ public class UserMove {
         }
     }
 
-    private final Cell getUserInput() {
+    private Cell getUserInput() {
         while (true) {
             System.out.println("Please type number between 1 and 9");
             final String userInput = new Scanner(System.in).nextLine();
             if (userInput.length() == 1) {
                 final char ch = userInput.charAt(0);
-                if (ch > '1' && ch < '9') {
+                if (ch >= '1' && ch <= '9') {
                     for (int i = 0; i < 3; i++) {
                         for (int j = 0; j < 3; j++) {
                             if (mapping[i][j] == ch) {
