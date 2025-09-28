@@ -1,4 +1,6 @@
-package FunnyLie.tictactoe;
+package FunnyLie.tictactoe.components;
+
+import FunnyLie.tictactoe.model.GameTable;
 
 import java.util.Random;
 
