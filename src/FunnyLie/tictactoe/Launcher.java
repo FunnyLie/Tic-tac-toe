@@ -1,11 +1,11 @@
 package FunnyLie.tictactoe;
 
 import FunnyLie.tictactoe.components.*;
-import FunnyLie.tictactoe.components.Keypad.DesktopNumericKeypadCellNumberConverter;
+import FunnyLie.tictactoe.components.Keypad.TerminalNumericKeypadCellNumberConverter;
 
 public final class Launcher {
     public static void main(String[] args) {
-        final CellNumberConverter cellNumberConverter = new DesktopNumericKeypadCellNumberConverter();
+        final CellNumberConverter cellNumberConverter = new TerminalNumericKeypadCellNumberConverter();
         final Game game = new Game(
                 new DataPrinter(cellNumberConverter),
                 new ComputerMove(),
